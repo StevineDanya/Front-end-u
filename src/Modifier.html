@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #FFFFFF;
+      color: #333;
+    }
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .logo span:first-child {
+      color: #FF0000;
+    }
+    .menu-icon {
+      font-size: 24px;
+      color: #333;
+      text-decoration: none;
+    }
+    .modify-button {
+      color: #FF0000;
+      text-decoration: none;
+      font-size: 16px;
+      float: right;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #0000FF;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .attendance-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .attendance-table th, .attendance-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    .attendance-table th {
+      background-color: #f2f2f2;
+    }
+    .student-name {
+      font-weight: bold;
+      color: #0000FF;
+    }
+    .student-image {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .attendance-status {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .present {
+      background-color: #00FF00;
+    }
+    .absent {
+      background-color: #FF0000;
+    }
+    .late {
+      background-color: #FFFF00;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <span>T</span>rack<span>E</span>tud
+      </div>
+      <a href="/page/connexion.html" class="menu-icon">☰</a>
+    </div>
+    
+    <a href="/page2/modifier.html" class="modify-button">Modifier</a>
+    
+    <h2>Devweb</h2>
+    <h3>Salle 03</h3>
+    <p>Présence en classe</p>
+    
+    <table class="attendance-table">
+      <tr>
+        <th>Étudiant</th>
+        <th>Dim.7 juil.24 08:30</th>
+        <th>Lun.8 juil.24 08:30</th>
+      </tr>
+      <tr>
+        <td><img src="student1.jpg" alt="ONDO, ruben" class="student-image"><span class="student-name">ONDO, ruben</span></td>
+        <td><span class="attendance-status absent"></span></td>
+        <td><span class="attendance-status present"></span></td>
+      </tr>
+      <tr>
+        <td><img src="student2.jpg" alt="MBA, Jules" class="student-image"><span class="student-name">MBA, Jules</span></td>
+        <td><span class="attendance-status present"></span></td>
+        <td><span class="attendance-status absent"></span></td>
+      </tr>
+      <tr>
+        <td><img src="student3.jpg" alt="EKOME, lucie" class="student-image"><span class="student-name">EKOME, lucie</span></td>
+        <td><span class="attendance-status present"></span></td>
+        <td><span class="attendance-status absent"></span></td>
+      </tr>
+      <tr>
+        <td><img src="student4.jpg" alt="KOUMBA LEMA" class="student-image"><span class="student-name">KOUMBA LEMA</span></td>
+        <td><span class="attendance-status late"></span></td>
+        <td><span class="attendance-status present"></span></td>
+      </tr>
+      <tr>
+        <td><img src="student5.jpg" alt="ADA, lea" class="student-image"><span class="student-name">ADA, lea</span></td>
+        <td><span class="attendance-status present"></span></td>
+        <td><span class="attendance-status present"></span></td>
+      </tr>
+      <tr>
+        <td><img src="student6.jpg" alt="NGOME, ive" class="student-image"><span class="student-name">NGOME, ive</span></td>
+        <td><span class="attendance-status absent"></span></td>
+        <td><span class="attendance-status present"></span></td>
+      </tr>
+      <tr>
+        <td><img src="student7.jpg" alt="ZANG, mariella" class="student-image"><span class="student-name">ZANG, mariella</span></td>
+        <td><span class="attendance-status present"></span></td>
+        <td><span class="attendance-status present"></span></td>
+      </tr>
+      <tr>
+        <td><img src="student8.jpg" alt="BOUKOULAKOU josepha" class="student-image"><span class="student-name">BOUKOULAKOU josepha</span></td>
+        <td><span class="attendance-status absent"></span></td>
+        <td><span class="attendance-status present"></span></td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

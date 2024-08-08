@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notification</title>
+</head>
+<body>
+    <div class="notification">
+        <div class="notification-header">
+           <img src="/tracketud/asset/image/Logo (3).png" alt="">
+            <span class="notification-title">Alerte de retard</span>
+        </div>
+        <div class="notification-content">
+            <p class="notification-message">
+                MBA Jules, vous êtes en retard ! Il est déjà 8h05 et vous n'êtes toujours pas arrivé(e).
+            </p>
+            <p class="notification-time">
+                Mardi 23 Mai 2024, 8:05
+            </p>
+        </div>
+        <div class="notification-actions">
+            <button class="notification-button">Marquer comme lu</button>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    // Simuler l'apparition de la notification après un court délai
+    setTimeout(() => {
+        document.querySelector('.notification').style.display = 'block';
+    }, 1000);
+    
+    // Gestion du clic sur le bouton
+    document.querySelector('.notification-button').addEventListener('click', () => {
+        document.querySelector('.notification').style.display = 'none';
+    });
+    </script>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+    }
+    .notification {
+        max-width: 300px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    .notification-header {
+        background-color: #364ff1;
+        color: white;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .notification-logo {
+        font-weight: bold;
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    .notification-title {
+        font-size: 16px;
+    }
+    .notification-content {
+        padding: 15px;
+    }
+    .notification-message {
+        margin-bottom: 10px;
+    }
+    .notification-time {
+        font-size: 14px;
+        color: #888;
+    }
+    .notification-actions {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+        border-top: 1px solid #eee;
+    }
+    .notification-button {
+        background-color: #ff0000;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    @keyframes slideIn {
+        from {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .notification {
+        animation: slideIn 0.5s ease-out;
+    }
+    </style>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      background-color: #000000;
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      height: 50px;
+      
+    }
+    
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+     
+      height: 40px;
+      width: 40px;
+    }
+    
+   
+    
+    
+    .nav-1 a {
+      color: #ecf0f1;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-1 a:hover {
+      color: #3498db;
+    }
+    
+    .presentation {
+      background-color: #364ff1;
+      color: #fff;
+      padding: 100px 0 50px;
+      text-align: center;
+    }
+    
+    .presentation h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    
+    .presentation p {
+      font-size: 24px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .features {
+      padding: 80px 0;
+    }
+    
+    .feature {
+      display: flex;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+    
+    .feature-image {
+      flex: 1;
+      text-align: center;
+    }
+    
+    .feature-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-content {
+      flex: 1;
+      padding: 0 40px;
+    }
+    
+    .feature h2 {
+      font-size: 36px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+    
+    .feature p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #34495e;
+    }
+    .feat{
+      width: 120px;
+      height: 90px;
+      background-color: #cc2418;
+      color: white;
+      border: none;
+      border-radius: 20px;
+    }
+    .feat:hover{
+     transform: translateY(-3px);
+     box-shadow: 0 4px 8px rgba(245, 11, 011, 0.2);
+     background-color: #5d0edb; 
+    }
+    .feat{
+      text-decoration: none;
+    }
+    
+    .cta {
+      background-color: #364ff1;
+      color: #fff;
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .cta h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: #fff;
+      color: #cc2418;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 15px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      background-color: #2c3e50;
+      color: #fff;
+    }
+    
+    footer {
+      background-color: #000000;
+      color: #ecf0f1;
+      padding: 40px 0;
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    
+    .footer-section {
+      flex: 1;
+      margin-right: 40px;
+    }
+    
+    .footer-section:last-child {
+      margin-right: 0;
+    }
+    
+    .footer-section h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #3498db;
+    }
+    
+    .footer-section ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-section ul li a {
+      color: #ecf0f1;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-section ul li a:hover {
+      color: #3498db;
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .social-icons a {
+      color: #ecf0f1;
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      color: #3498db;
+    }
+    
+    .copyright {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(236, 240, 241, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <!-- <div class="logo">Track<span>Stud</span></div> -->
+      <img src="/public/logologo.svg" alt="logo" class="logo">
+      <div class="nav-1">
+        <a href="/index.html">Accueil</a>
+        <a href="/src/Presentation.html">Présentation</a>
+        <a href="/src/connexion.html">Se connecter</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="presentation">
+    <div class="container">
+      <h1>Découvrez TrackEtud</h1>
+      <p>La solution innovante pour la gestion de l'assiduité des étudiants grâce à la géolocalisation intelligente</p>
+    </div>
+  </div>
+
+  <section class="features">
+    <div class="container">
+      <div class="feature">
+        <div class="feature-image">
+          <img alt="Capture d'écran de l'interface TrackStud montrant une carte interactive avec des points représentant les étudiants" src="/public/image 3.svg" width="500" height="300">
+        </div>
+        <div class="feature-content">
+          <h2>Géolocalisation précise</h2>
+          <p>TrackEtud utilise la technologie GPS de pointe pour localiser les étudiants à l'intérieur du campus. Notre système intelligent détecte automatiquement si un étudiant est présent dans la salle de classe assignée, éliminant ainsi le besoin de feuilles de présence manuelles.</p>
+        </div>
+      </div>
+      
+      <div class="feature">
+        <div class="feature-content">
+          <h2>Tableau de bord intuitif</h2>
+          <p>Notre interface conviviale permet aux enseignants et aux administrateurs de visualiser en temps réel les données de présence. Vous pouvez facilement générer des rapports, identifier les tendances d'assiduité et prendre des décisions éclairées pour améliorer l'engagement des étudiants.</p>
+        </div>
+        <div class="feature-image">
+          <img alt="Capture d'écran du tableau de bord TrackStud montrant des graphiques et statistiques d'assiduité" src="/public/tableau.svg" width="500" height="300">
+        </div>
+      </div>
+      
+      <div class="feature">
+        <div class="feature-image">
+          <button class="feat"><a href="/src/notification.html" class="feat">Notifications</a></button>
+        </div>
+        <div class="feature-content">
+          <h2>Notifications intelligentes</h2>
+          <p>TrackEtud envoie des notifications automatiques aux étudiants pour leur rappeler leurs cours à venir et les alerter en cas d'absence. Les enseignants et les parents peuvent également recevoir des mises à jour sur l'assiduité, favorisant ainsi une meilleure communication entre toutes les parties prenantes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Prêt à révolutionner la gestion de l'assiduité ?</h2>
+      <a href="https://track-stud.app/demo" class="cta-button">Demander une démo</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>À propos</h3>
+          <p>TrackEtud est une solution innovante pour le suivi de l'assiduité des étudiants, utilisant la géolocalisation intelligente pour simplifier la gestion des présences.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Liens rapides</h3>
+          <ul>
+            <li><a href="https://track-stud.app">Accueil</a></li>
+            <li><a href="https://track-stud.app/presentation">Présentation</a></li>
+            <li><a href="https://track-stud.app/tarifs">Tarifs</a></li>
+            <li><a href="https://track-stud.app/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: contact@trackEtud.com</p>
+          <p>Tél: +241 66 99 15 66</p>
+          <div class="social-icons">
+            <a href="https://facebook.com/trackstud" target="_blank">&#xf09a;</a>
+            <a href="https://twitter.com/trackstud" target="_blank">&#xf099;</a>
+            <a href="https://linkedin.com/company/trackstud" target="_blank">&#xf0e1;</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2024 TrackEtud. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const ctaButton = document.querySelector('.cta-button');
+      ctaButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('Merci de votre intérêt ! Un membre de notre équipe vous contactera sous peu pour organiser une démonstration personnalisée de TrackStud.');
+      });
+    });
+  </script>
+</body>
+</html>
